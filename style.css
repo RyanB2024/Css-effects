@@ -1,5 +1,6 @@
 body { 
     margin: 0; /* Remove the default margin */
+    background-image: linear-gradient(to right, #2A7B9B, #EDDD53);
 }
 
 #image-row { 
@@ -16,6 +17,24 @@ img {
     height: auto;
 }
 
+#img-A:hover{
+    transition-property: filter;
+    transition-duration: 5s;
+    filter:blur(10px)
+}
+
+#img-B:hover{
+    transition-property: filter;
+    transition-duration: 10s;
+    filter: brightness(50%);
+}
+
+#img-C:hover{
+    transition-property: filter;
+    transition-duration: 1s;
+    filter:grayscale(90%)
+}
+
 #click-me {
     /* Centre the button */
     display: block;
@@ -26,7 +45,18 @@ img {
     color: white;
     border: none;
     padding: 10px;
-
+    box-shadow: 10px 2px 2px rgb(56, 56, 56);
     font-size: 2em;
     font-weight: bold;
+    position:relative;
+
+    /*Smooth transition button up*/
+    transition-property: none
+    transition-duration: 1s;
+    filter: blur(90%);
+}
+
+#click-me:hover{
+    bottom: 10px;
+    box-shadow: 10px 11px 2px rgb(56, 56, 56);
 }
